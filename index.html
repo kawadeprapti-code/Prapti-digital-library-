@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Library Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>📚 Digital Library</h2>
+  <button id="logoutBtn" class="hidden" onclick="logout()">Logout</button>
+</header>
+
+<main>
+
+<section id="authSection" class="auth">
+  <h1>Welcome to Digital Library</h1>
+  <p>Read, Learn and Explore</p>
+
+  <div class="auth-box">
+    <h2 id="authTitle">Login</h2>
+
+    <input id="name" type="text" placeholder="Full Name" class="hidden">
+    <input id="email" type="email" placeholder="Email Address">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()" id="loginBtn">Login</button>
+    <button onclick="signup()" id="signupBtn" class="hidden">Create Account</button>
+
+    <p id="authMessage"></p>
+    <p id="switchText">
+      Don't have an account?
+      <a href="#" onclick="showSignup()">Sign Up</a>
+    </p>
+  </div>
+
+  <p class="admin-hint">
+    Demo Admin: admin@library.com / Admin123
+  </p>
+</section>
+
+<section id="dashboard" class="hidden">
+
+  <h1 id="welcome"></h1>
+  <p>Welcome to your Digital Library Dashboard.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <h2 id="totalBooks">0</h2>
+      <p>Total Books</p>
+    </div>
+    <div class="stat">
+      <h2 id="borrowedBooks">0</h2>
+      <p>Borrowed Books</p>
+    </div>
+    <div class="stat">
+      <h2 id="totalNotes">0</h2>
+      <p>My Notes</p>
+    </div>
+  </div>
+
+  <nav>
+    <button onclick="showSection('library')">📚 Library</button>
+    <button onclick="showSection('notes')">📝 Notes</button>
+    <button id="adminNav" class="hidden"
+      onclick="showSection('admin')">⚙️ Admin</button>
+  </nav>
+
+  <section id="library" class="panel">
+    <h2>Available Books</h2>
+    <input id="searchInput" type="search"
+      placeholder="Search books or subjects..."
+      oninput="displayBooks()">
+    <div id="bookList" class="book-grid"></div>
+  </section>
+
+  <section id="notes" class="panel hidden">
+    <h2>My Notes</h2>
+    <input id="noteTitle" placeholder="Note Title">
+    <textarea id="noteContent"
+      placeholder="Write your notes here..."></textarea>
+    <button onclick="addNote()">Save Note</button>
+    <div id="notesList"></div>
+  </section>
+
+  <section id="admin" class="panel hidden">
+    <h2>Admin Dashboard</h2>
+    <h3>Add New Book</h3>
+
+    <input id="newTitle" placeholder="Book Title">
+    <input id="newSubject" placeholder="Subject">
+    <input id="newAuthor" placeholder="Author Name">
+    <input id="newPdf" type="url"
+      placeholder="PDF URL (optional, direct PDF link)">
+
+    <button onclick="addBook()">Add Book</button>
+    <h3>Manage Books</h3>
+    <div id="adminBookList"></div>
+  </section>
+
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Digital Library Management System</p>
+  <p>Developed by Prapti Kawade | TYCS</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
