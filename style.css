@@ -1,0 +1,214 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+header {
+  background: #173b68;
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  background: #ef4444;
+}
+
+main {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 15px;
+  min-height: 75vh;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px 3px;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #173b68;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 9px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.auth {
+  max-width: 440px;
+  margin: 45px auto;
+  text-align: center;
+}
+
+.auth h1 {
+  color: #173b68;
+  margin-bottom: 10px;
+}
+
+.auth-box {
+  background: white;
+  padding: 25px;
+  margin-top: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px #00000015;
+}
+
+.auth-box h2 {
+  margin-bottom: 15px;
+}
+
+.auth-box button {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.auth a {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+#authMessage {
+  margin: 10px;
+  color: #dc2626;
+}
+
+.admin-hint {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #64748b;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stat {
+  background: white;
+  padding: 22px 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px #00000010;
+}
+
+.stat h2 {
+  color: #2563eb;
+  font-size: 28px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.panel h2 {
+  color: #173b68;
+  margin-bottom: 15px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.book-card {
+  border: 1px solid #dbe3ee;
+  border-radius: 9px;
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.book-card h3 {
+  color: #173b68;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  margin: 7px 0;
+  color: #475569;
+}
+
+.note-card {
+  border: 1px solid #cbd5e1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+footer {
+  background: #173b68;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 30px;
+}
+
+@media(max-width:700px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+
+@media(max-width:420px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav button {
+    flex: 1;
+  }
+}
